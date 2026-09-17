@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f6f8fb;
+  --color-foreground: #0f1e33;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #0f1e33;
+
+  --color-muted: #eef2f8;
+  --color-muted-foreground: #5b6b82;
+
+  --color-border: #e2e8f2;
+  --color-input: #e2e8f2;
+  --color-ring: #2563eb;
+
+  --color-primary: #1e5eff;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #0ea5e9;
+  --color-accent-foreground: #ffffff;
+
+  --color-navy: #0b1f3a;
+  --color-navy-foreground: #e6eefc;
+
+  /* chart palette (blue-forward) */
+  --color-chart-1: #1e5eff;
+  --color-chart-2: #0ea5e9;
+  --color-chart-3: #6366f1;
+  --color-chart-4: #14b8a6;
+  --color-chart-5: #8b5cf6;
+  --color-chart-6: #f59e0b;
+
+  --color-positive: #16a34a;
+  --color-negative: #dc2626;
+
+  --radius: 0.75rem;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+/* thin scrollbar for tables */
+.scroll-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: #c8d3e4;
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.5s ease both;
+}
