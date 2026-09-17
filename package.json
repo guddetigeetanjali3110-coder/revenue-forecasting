@@ -8,7 +8,7 @@
     "prebuild": "node scripts/process-data.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "next": "15.5.4",
